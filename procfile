@@ -1,4 +1,6 @@
-nano Procfile
-'''
+nano procfile
+```
 
+Delete everything and paste:
+```
 worker: python football_sync.py
