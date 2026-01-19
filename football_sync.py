@@ -198,7 +198,9 @@ if __name__ == "__main__":
     pipeline.run_daily_sync()
     
     # Schedule daily sync at 6 AM
-    schedule.every().day.at("06:00").do(pipeline.run_daily_sync)
+    -- schedule.every().day.at("06:00").do(pipeline.run_daily_sync)
+
+    schedule.every(10).minutes.do(pipeline.run_daily_sync)
     
     # Alternative: Run every 24 hours from now
     # schedule.every(24).hours.do(pipeline.run_daily_sync)
